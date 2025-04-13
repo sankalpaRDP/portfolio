@@ -1,2 +1,2 @@
-# portfolio
-this is a portfolio web site 
+# Portfolio
+Hi! This is my GitHub portfolio where I share my projects and learning experiments in networking and cybersecurity.
