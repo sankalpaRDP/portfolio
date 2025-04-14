@@ -152,11 +152,6 @@ body.light-theme .navbar-toggler-icon {
     from { width: 0; }
     to { width: 100%; }
 }
-@media (max-width: 767.98px) {
-    .greeting-bubble {
-        margin-top: 1.0rem; /* Adjust the value as needed */
-    }
-}
 .hero-section {
     padding: 7rem 0 3rem 0;
     position: relative;
