@@ -152,7 +152,11 @@ body.light-theme .navbar-toggler-icon {
     from { width: 0; }
     to { width: 100%; }
 }
-
+@media (max-width: 767.98px) {
+    .greeting-bubble {
+        margin-top: 3.5rem; /* Adjust the value as needed */
+    }
+}
 .hero-section {
     padding: 7rem 0 3rem 0;
     position: relative;
@@ -1135,6 +1139,12 @@ body.light-theme .experience-skills .skill-tag {
     
     .experience-details {
         font-size: 0.9rem;
+    }
+}
+@media (max-width: 767.98px) {
+    #education .icon-container,
+    #experience .icon-container {
+        display: none !important;
     }
 }
 
