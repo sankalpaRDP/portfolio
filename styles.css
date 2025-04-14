@@ -1,4 +1,4 @@
-
+        
 :root {
     --primary-color: #3b82f6;
     --secondary-color: #8b5cf6;
@@ -152,6 +152,7 @@ body.light-theme .navbar-toggler-icon {
     from { width: 0; }
     to { width: 100%; }
 }
+
 .hero-section {
     padding: 7rem 0 3rem 0;
     position: relative;
@@ -807,7 +808,6 @@ body.light-theme .education-details {
         font-size: 0.8rem;
     }
 }
-
 /* Certifications Section Styles */
 .certifications-section {
     padding: 6rem 0;
@@ -1731,4 +1731,263 @@ padding: 1.5rem 0;
 .footer-social {
 margin-top: 1rem;
 }
+}
+
+/* Enhanced Project Gallery Modal Styles */
+
+/* Overlay background effect */
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Modal sizing and appearance */
+#projectGalleryModal .modal-dialog {
+  max-width: 85%;
+  margin: 1.75rem auto;
+}
+
+#projectGalleryModal .modal-content {
+  background-color: var(--card-bg, #1a1d2d);
+  border: 1px solid var(--border-color, #2a2d3d);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+#projectGalleryModal .modal-header {
+  border-bottom: 1px solid var(--border-color, #2a2d3d);
+  padding: 0.8rem 1rem;
+}
+
+#projectGalleryModal .modal-title {
+  color: var(--primary-color, #4e63e9);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+#projectGalleryModal .btn-close {
+  color: var(--text-color, #ffffff);
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+#projectGalleryModal .btn-close:hover {
+  opacity: 1;
+}
+
+#projectGalleryModal .modal-body {
+  padding: 1rem;
+}
+
+/* Carousel improvements */
+#projectCarousel {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.25rem;
+}
+
+#projectCarousel .carousel-item {
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+#projectCarousel .carousel-item img {
+  object-fit: contain;
+  height: 90%;
+  width: 90%;
+  transition: transform 0.3s ease;
+}
+
+#projectCarousel .carousel-item:hover img {
+  transform: scale(1.02);
+}
+
+/* Carousel controls */
+#projectCarousel .carousel-control-prev,
+#projectCarousel .carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+#projectCarousel .carousel-control-prev {
+  left: 20px;
+}
+
+#projectCarousel .carousel-control-next {
+  right: 20px;
+}
+
+#projectCarousel .carousel-control-prev:hover,
+#projectCarousel .carousel-control-next:hover {
+  background-color: var(--primary-color, #4e63e9);
+  opacity: 1;
+}
+
+#projectCarousel .carousel-control-prev-icon,
+#projectCarousel .carousel-control-next-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Project description box */
+.project-description {
+  padding: 1.1rem;
+  background-color: rgba(var(--primary-rgb, 78, 99, 233), 0.08);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-color, #4e63e9);
+}
+
+.project-description h4 {
+  color: var(--primary-color, #4e63e9);
+  margin-bottom: 10px;
+  font-weight: 650;
+  font-size: 1.1rem;
+}
+
+.project-description p {
+  color: var(--text-color, #e6e7ec);
+  margin-bottom: 0;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+/* Indicators for multiple images */
+#projectCarousel .carousel-indicators {
+  margin-bottom: 10px;
+}
+
+#projectCarousel .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+}
+
+#projectCarousel .carousel-indicators button.active {
+  background-color: var(--primary-color, #4e63e9);
+  transform: scale(1.2);
+}
+
+/* Add image counter */
+.carousel-counter {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  z-index: 10;
+}
+
+/* Gallery navigation thumbnails */
+.gallery-thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.gallery-thumbnail {
+  width: 70px;
+  height: 50px;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.gallery-thumbnail.active {
+  border-color: var(--primary-color, #4e63e9);
+  opacity: 1;
+}
+
+.gallery-thumbnail:hover {
+  opacity: 1;
+}
+
+.gallery-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  #projectGalleryModal .modal-dialog {
+    max-width: 95%;
+  }
+  
+  #projectCarousel .carousel-item {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  #projectCarousel .carousel-item {
+    height: 300px;
+  }
+  
+  .project-description h4 {
+    font-size: 1.2rem;
+  }
+  
+  .project-description p {
+    font-size: 1rem;
+  }
+  
+  #projectCarousel .carousel-control-prev,
+  #projectCarousel .carousel-control-next {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  #projectGalleryModal .modal-dialog {
+    margin: 0.5rem auto;
+  }
+  
+  #projectCarousel .carousel-item {
+    height: 250px;
+  }
+  
+  #projectGalleryModal .modal-body {
+    padding: 1rem;
+  }
+}
+
+/* Animation for modal */
+.modal.fade .modal-dialog {
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-dialog {
+  transform: scale(1);
+}
+
+/* Image zoom feature */
+.zoomable-image {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.image-zoomed {
+  transform: scale(1.5);
+  cursor: zoom-out;
 }
