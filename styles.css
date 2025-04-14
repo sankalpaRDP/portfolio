@@ -154,7 +154,7 @@ body.light-theme .navbar-toggler-icon {
 }
 @media (max-width: 767.98px) {
     .greeting-bubble {
-        margin-top: 2.0rem; /* Adjust the value as needed */
+        margin-top: 1.0rem; /* Adjust the value as needed */
     }
 }
 .hero-section {
